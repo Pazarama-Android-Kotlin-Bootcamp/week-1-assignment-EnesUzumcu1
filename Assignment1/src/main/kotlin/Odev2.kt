@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main() {
     print("Boyut girin: ")
     //Girilecek boyut belirlenir
@@ -5,10 +7,11 @@ fun main() {
     var x = inputBoyut.toInt()
     var result: Long = 0
     //girilen boyut kadar input girilmesi istenir
+    val input = Scanner(System.`in`)
+    print("Sayıları Aralıklı Olarak Girin: ")
     while (x > 0) {
-        print("Sayı Girin: ")
-        val input = readLine()!!
-        result += input.toLong()
+
+        result += input.nextLong()
         x--
     }
     print(result.toString())
